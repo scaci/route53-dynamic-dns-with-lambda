@@ -1,6 +1,8 @@
 # route53-dynamic-dns-with-lambda
 ### A Dynamic DNS system built with API Gateway, Lambda &amp; Route 53 for Openwrt.  
 
+This a fork of https://github.com/awslabs/route53-dynamic-dns-with-lambda, implemented for Openwrt
+
 *This repository originally supplemented the blog post: [Building a Serverless Dynamic DNS System with AWS](https://medium.com/aws-activate-startup-blog/building-a-serverless-dynamic-dns-system-with-aws-a32256f0a1d8)  
 Code and instructions for the version described in the blog can be found in the [v1](./v1/)  folder of this repository.*   
 
