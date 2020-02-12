@@ -461,6 +461,11 @@ define Package/ddns-scripts_route53-v1/prerm
 endef
 
 ###### *************************************************************************
+define Package/ddns-scripts_aws-ddns
+        $(call Package/ddns-scripts/Default)
+        TITLE:=Amazon AWS DDNS
+        DEPENDS:=ddns-scripts +curl +openssl-util +jq +ca-bundle
+endef
 define Package/ddns-scripts_aws-ddns/preinst
                 #!/bin/sh
                 # if NOT run buildroot then stop service
