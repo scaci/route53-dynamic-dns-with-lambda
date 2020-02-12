@@ -166,6 +166,14 @@ define Package/ddns-scripts/conffiles
 endef
 
 ###### *************************************************************************
+define Package/ddns-scripts_aws-ddns
+        $(call Package/ddns-scripts/Default)
+        TITLE:=AWS DDNS (requires cURL and jq)
+        DEPENDS:=ddns-scripts +curl +jq
+endef
+define Package/ddns-scripts_aws-ddns/description
+        Dynamic DNS Client scripts extension for AWS DDNS (require/install cURL and jq)
+endef
 define Package/ddns-scripts/preinst
                 #!/bin/sh
                 # if NOT run buildroot then stop service
