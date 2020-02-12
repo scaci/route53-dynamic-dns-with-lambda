@@ -453,6 +453,14 @@ define Package/ddns-scripts_route53-v1/prerm
 endef
 
 ###### *************************************************************************
+define Package/ddns-scripts_aws-ddns
+        $(call Package/ddns-scripts/Default)
+        TITLE:=AWS DDNS (requires cURL and jq)
+        DEPENDS:=ddns-scripts +curl +jq
+endef
+define Package/ddns-scripts_aws-ddns/description
+        Dynamic DNS Client scripts extension for AWS DDNS (require/install cURL and jq)
+endef
 define Package/ddns-scripts_aws-ddns/preinst
                 #!/bin/sh
                 # if NOT run buildroot then stop service
